@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="Moura Lab Mobile">
+  <rect width="512" height="512" rx="96" fill="#176b5f"/>
+  <rect x="132" y="62" width="248" height="388" rx="42" fill="#eef3f2"/>
+  <rect x="158" y="100" width="196" height="284" rx="22" fill="#172126"/>
+  <circle cx="256" cy="418" r="17" fill="#176b5f"/>
+  <path d="M190 271c22-52 43-78 66-78s44 26 66 78" fill="none" stroke="#7fd8ca" stroke-width="24" stroke-linecap="round"/>
+  <path d="M206 278h100" fill="none" stroke="#f2c15b" stroke-width="22" stroke-linecap="round"/>
+  <circle cx="256" cy="178" r="34" fill="#f2c15b"/>
+</svg>

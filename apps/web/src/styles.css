@@ -1,0 +1,417 @@
+:root {
+  color: #172126;
+  background: #eef3f2;
+  font-family:
+    Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+button {
+  font: inherit;
+}
+
+.app-shell {
+  min-height: 100vh;
+  padding: 18px;
+  background:
+    radial-gradient(circle at top left, rgba(42, 125, 111, 0.18), transparent 30%),
+    linear-gradient(135deg, #eef3f2 0%, #f7f8f4 45%, #eaf0f5 100%);
+}
+
+.phone-stage {
+  width: min(1180px, 100%);
+  margin: 0 auto;
+}
+
+.hero,
+.panel,
+.camera-panel,
+.status-card,
+.device-card {
+  border: 1px solid rgba(111, 128, 137, 0.22);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.88);
+  box-shadow: 0 18px 48px rgba(40, 58, 68, 0.08);
+}
+
+.hero {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 22px;
+  padding: 24px;
+  margin-bottom: 16px;
+}
+
+.eyebrow {
+  margin: 0 0 6px;
+  color: #2d7468;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+h1,
+h2,
+p {
+  margin: 0;
+}
+
+h1 {
+  max-width: 720px;
+  font-size: 34px;
+  line-height: 1.08;
+}
+
+h2 {
+  font-size: 17px;
+}
+
+.hero p:last-child,
+.panel p {
+  max-width: 760px;
+  color: #5d6d72;
+  line-height: 1.5;
+}
+
+.hero-actions,
+.toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 44px;
+  padding: 0 14px;
+  border: 0;
+  border-radius: 8px;
+  background: #176b5f;
+  color: #ffffff;
+  cursor: pointer;
+  font-weight: 750;
+}
+
+button:hover {
+  background: #0f584e;
+}
+
+button:disabled {
+  background: #9aaba8;
+  color: #eef3f2;
+  cursor: not-allowed;
+}
+
+button.secondary {
+  background: #263b4a;
+}
+
+button.install {
+  background: #d3a133;
+  color: #172126;
+}
+
+button.install:hover {
+  background: #bd8c25;
+}
+
+button.install:disabled {
+  background: #d8dedc;
+  color: #64736f;
+}
+
+button.danger {
+  background: #7a3440;
+}
+
+.install-note,
+.security-note,
+.error-note {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 44px;
+  padding: 10px 14px;
+  margin: -6px 0 16px;
+  border: 1px solid rgba(211, 161, 51, 0.42);
+  border-radius: 8px;
+  background: #fff8e7;
+  color: #5f4d21;
+  font-size: 14px;
+  line-height: 1.35;
+}
+
+.security-note {
+  border-color: rgba(168, 69, 76, 0.32);
+  background: #fff1f1;
+  color: #74323a;
+}
+
+.error-note {
+  border-color: rgba(168, 69, 76, 0.32);
+  background: #fff8f8;
+  color: #74323a;
+}
+
+.install-note svg,
+.security-note svg {
+  flex: 0 0 auto;
+}
+
+.live-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) 320px;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.camera-panel,
+.panel {
+  padding: 16px;
+}
+
+.panel-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+.panel-title svg,
+.device-card svg,
+.status-card svg {
+  flex: 0 0 auto;
+  color: #176b5f;
+}
+
+.panel-title span {
+  display: block;
+  margin-top: 2px;
+  color: #6b7a80;
+  font-size: 13px;
+}
+
+.video-frame {
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  margin-bottom: 14px;
+  overflow: hidden;
+  border-radius: 8px;
+  background: #10181d;
+}
+
+.video-frame video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.empty-video {
+  display: grid;
+  justify-items: center;
+  gap: 12px;
+  color: #d8e5e8;
+  text-align: center;
+}
+
+.empty-video span {
+  max-width: 280px;
+}
+
+.sensor-stack {
+  display: grid;
+  gap: 10px;
+}
+
+.status-card {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-height: 78px;
+  padding: 14px;
+}
+
+.status-card span,
+.device-card span,
+.device-card small,
+.data-rows span {
+  color: #66777c;
+  font-size: 13px;
+}
+
+.status-card strong,
+.device-card strong {
+  display: block;
+  margin-top: 2px;
+}
+
+.status-card[data-state="ativo"] {
+  border-color: rgba(37, 134, 91, 0.34);
+  background: #edf8f1;
+}
+
+.status-card[data-state="bloqueado"] {
+  border-color: rgba(168, 69, 76, 0.32);
+  background: #fff1f1;
+}
+
+.status-card[data-state="indisponivel"] {
+  background: #f0f2f2;
+}
+
+.telemetry-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.meter {
+  width: 100%;
+  height: 12px;
+  overflow: hidden;
+  border-radius: 8px;
+  background: #dfe7e8;
+}
+
+.meter span {
+  display: block;
+  height: 100%;
+  border-radius: inherit;
+  background: linear-gradient(90deg, #2d8c7e, #d3a133);
+  transition: width 120ms ease;
+}
+
+.panel > strong {
+  display: block;
+  margin: 12px 0 6px;
+  font-size: 28px;
+}
+
+.data-rows {
+  display: grid;
+  gap: 9px;
+}
+
+.data-rows div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  min-height: 32px;
+  border-bottom: 1px solid #edf1f1;
+}
+
+.data-rows strong {
+  font-variant-numeric: tabular-nums;
+  text-align: right;
+}
+
+.inline-action {
+  width: 100%;
+  margin-top: 14px;
+}
+
+.device-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.device-card {
+  min-height: 118px;
+  padding: 15px;
+}
+
+.device-card strong {
+  font-size: 24px;
+}
+
+.device-card.privacy {
+  background: #eef7f6;
+}
+
+.device-list {
+  margin-bottom: 18px;
+}
+
+.devices {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.devices span {
+  max-width: 100%;
+  padding: 8px 10px;
+  border: 1px solid #d5dfdf;
+  border-radius: 8px;
+  background: #f8fbfb;
+  color: #4e5e64;
+  overflow-wrap: anywhere;
+}
+
+@media (max-width: 980px) {
+  .hero {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .live-grid,
+  .telemetry-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .device-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 680px) {
+  .app-shell {
+    padding: 10px;
+  }
+
+  .hero,
+  .camera-panel,
+  .panel {
+    padding: 14px;
+  }
+
+  h1 {
+    font-size: 27px;
+  }
+
+  .hero-actions,
+  .toolbar {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .live-grid,
+  .telemetry-grid,
+  .device-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .video-frame {
+    aspect-ratio: 3 / 4;
+  }
+}

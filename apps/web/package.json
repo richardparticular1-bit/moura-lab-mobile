@@ -1,0 +1,22 @@
+{
+  "name": "@moura/web",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "node ../../node_modules/vite/bin/vite.js",
+    "build": "node ../../node_modules/typescript/bin/tsc -b && node ../../node_modules/vite/bin/vite.js build",
+    "preview": "node ../../node_modules/vite/bin/vite.js preview"
+  },
+  "dependencies": {
+    "@vitejs/plugin-react": "^4.3.4",
+    "vite": "^6.0.6",
+    "typescript": "^5.7.2",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "lucide-react": "^0.468.0"
+  },
+  "devDependencies": {
+    "@types/react": "^19.0.2",
+    "@types/react-dom": "^19.0.2"
+  }
+}
